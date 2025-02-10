@@ -30,11 +30,10 @@
 							<img src="https://www.shutterstock.com/shutterstock/photos/1916472203/display_1500/stock-photo-cryptocurrency-logo-collected-the-main-1916472203.jpg" alt="lockers" />
 						</div>
 					</section>
-				<!-- Two -->
 <!-- Two -->
 <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" 
     id="first" 
-    style="display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap;">
+    style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
     
     <div class="content" style="flex: 1; padding-right: 20px; max-width: 50%;">
         <h2 style="font-size: 1.8rem; margin-bottom: 5px;">L'équipe 💵💰💲💸💶💷</h2>
@@ -48,9 +47,48 @@
     <div class="image" style="flex: 1; max-width: 40%; display: flex; justify-content: center; align-items: center;">
         <img src="https://raw.githubusercontent.com/chrisyk59/crypto-school/main/images/crypto-equipe.png"
              alt="Équipe Crypto"
-             style="width: 400px; height: 400px; display: block; object-fit: contain; border-radius: 10px; margin-top: -210px;">
+             class="responsive-img">
     </div>
 </section>
+
+<style>
+/* Style par défaut (Desktop) */
+.responsive-img {
+    width: 400px;
+    height: 400px;
+    display: block;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-top: -210px;
+    max-width: 100%;
+}
+
+/* Adaptation pour les écrans mobiles */
+@media screen and (max-width: 768px) {
+    .spotlight {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .image {
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .responsive-img {
+        width: 80%;
+        height: auto;
+        margin-top: 0px; /* Ne pas remonter l'image sur mobile */
+    }
+}
+</style>
 				<!-- Three -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
