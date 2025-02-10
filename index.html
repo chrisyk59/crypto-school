@@ -31,9 +31,10 @@
 						</div>
 					</section>
 <!-- Two -->
+<!-- Section Équipe -->
 <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" 
     id="first" 
-    style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+    style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; position: relative;">
     
     <div class="content" style="flex: 1; padding-right: 20px; max-width: 50%;">
         <h2 style="font-size: 1.8rem; margin-bottom: 5px;">L'équipe 💵💰💲💸💶💷</h2>
@@ -44,30 +45,41 @@
         </p>
     </div>
 
-    <div class="image" style="flex: 1; max-width: 40%; display: flex; justify-content: center; align-items: center;">
+    <div class="image-container">
         <img src="https://raw.githubusercontent.com/chrisyk59/crypto-school/main/images/crypto-equipe.png"
              alt="Équipe Crypto"
              class="responsive-img">
     </div>
 </section>
 
+<!-- Style -->
 <style>
-/* Style pour Desktop */
+/* Style Desktop */
+.image-container {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 .responsive-img {
     width: 400px;
     height: 400px;
-    display: block;
     object-fit: contain;
     border-radius: 10px;
-    margin-top: -210px; /* Remonte l’image sur Desktop */
+    position: absolute;
+    top: -210px; /* Remonte l’image sur grand écran */
     max-width: 100%;
 }
 
-/* Adaptation pour Mobile */
+/* Adaptation Mobile */
 @media screen and (max-width: 768px) {
     .spotlight {
         flex-direction: column;
         text-align: center;
+        position: relative;
     }
 
     .content {
@@ -75,19 +87,21 @@
         padding: 0 20px;
     }
 
-    .image {
+    .image-container {
         max-width: 100%;
         justify-content: center;
         align-items: center;
         display: flex;
+        position: relative;
     }
 
     .responsive-img {
-        width: 90%; /* Réduction de la taille de l’image sur mobile */
+        width: 90%;
         height: auto;
-        margin-top: 0px; /* Suppression du margin négatif */
         position: relative;
-        display: block; /* Assurer qu’elle apparaisse toujours */
+        top: 0; /* Suppression du décalage négatif sur mobile */
+        margin-top: 20px; /* Ajout d'un petit espace */
+        min-height: auto; /* Correction de l'affichage */
     }
 }
 </style>
