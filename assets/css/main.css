@@ -25,6 +25,31 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+.spotlight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permet à l'image et au texte de s'ajuster en fonction de l'écran */
+}
+
+.spotlight .content {
+    flex: 1;
+    padding-right: 20px; /* Espace entre le texte et l’image */
+}
+
+.spotlight .image {
+    flex: 1;
+    max-width: 50%; /* Évite que l’image ne prenne toute la largeur */
+    text-align: right; /* Aligner l’image à droite */
+}
+
+.spotlight .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Empêche le découpage de l’image */
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
