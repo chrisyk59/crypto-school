@@ -52,18 +52,18 @@
 </section>
 
 <style>
-/* Style par défaut (Desktop) */
+/* Style pour Desktop */
 .responsive-img {
     width: 400px;
     height: 400px;
     display: block;
     object-fit: contain;
     border-radius: 10px;
-    margin-top: -210px;
+    margin-top: -210px; /* Remonte l’image sur Desktop */
     max-width: 100%;
 }
 
-/* Adaptation pour les écrans mobiles */
+/* Adaptation pour Mobile */
 @media screen and (max-width: 768px) {
     .spotlight {
         flex-direction: column;
@@ -83,9 +83,11 @@
     }
 
     .responsive-img {
-        width: 80%;
+        width: 90%; /* Réduction de la taille de l’image sur mobile */
         height: auto;
-        margin-top: 0px; /* Ne pas remonter l'image sur mobile */
+        margin-top: 0px; /* Suppression du margin négatif */
+        position: relative;
+        display: block; /* Assurer qu’elle apparaisse toujours */
     }
 }
 </style>
