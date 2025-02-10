@@ -1,1 +1,2 @@
-# crypto-school
+# presentation-site
+web site for project presentation
